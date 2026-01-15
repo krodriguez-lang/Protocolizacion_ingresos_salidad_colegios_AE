@@ -1,0 +1,157 @@
+import React from 'react';
+import { Shield, Package, UserCheck, AlertTriangle, Mail, Eye, FileText, CheckCircle, Clock } from 'lucide-react';
+
+const Infografia = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8 flex items-center justify-center">
+      <div className="max-w-4xl w-full bg-white rounded-3xl shadow-2xl border-8 overflow-hidden" style={{borderColor: '#008D83'}}>
+        
+        {/* Header */}
+        <div className="text-white p-12 text-center relative overflow-hidden" style={{background: 'linear-gradient(135deg, #008D83 0%, #00695C 100%)'}}>
+          <div className="absolute top-0 right-0 w-64 h-64 rounded-full opacity-10 -mr-32 -mt-32 bg-white"></div>
+          <Shield className="w-20 h-20 mx-auto mb-4 drop-shadow-lg text-white" />
+          <div className="inline-block px-8 py-3 rounded-2xl shadow-xl bg-white">
+            <h1 className="text-3xl font-black" style={{color: '#008D83'}}>Protocolización de ingresos/salidas y manejo de hurtos</h1>
+            <h2 className="text-2xl font-black" style={{color: '#385988'}}>Colegios Alianza Educativa</h2>
+          </div>
+        </div>
+
+        <div className="p-10">
+          
+          {/* Sección 1: Control de Ingreso */}
+          <div className="mb-10">
+            <div className="flex items-center gap-3 mb-6 pb-3" style={{borderBottom: '4px solid #F68D2E'}}>
+              <div className="text-white rounded-full w-10 h-10 flex items-center justify-center font-black text-xl shadow-lg" style={{backgroundColor: '#008D83'}}>1</div>
+              <h3 className="text-3xl font-black text-gray-800">Control de Ingreso y Salida</h3>
+            </div>
+            
+            <div className="flex items-center gap-6">
+              <div className="flex-shrink-0">
+                <div className="rounded-3xl p-6 shadow-xl" style={{background: 'linear-gradient(135deg, #008D83 0%, #00695C 100%)'}}>
+                  <Package className="w-20 h-20 text-white" />
+                </div>
+              </div>
+              
+              <div className="flex-1 rounded-2xl p-6 shadow-md" style={{background: 'linear-gradient(to right, #E0F2F1 0%, #B2DFDB 100%)', borderLeft: '4px solid #008D83'}}>
+                <p className="text-gray-800 text-xl leading-relaxed">
+                  <span className="font-black" style={{color: '#00695C'}}>La empresa de seguridad</span> revisa maletas y pertenencias de <span className="font-bold" style={{color: '#385988'}}>todas las personas</span> que ingresan y salen de las instituciones educativas.
+                </p>
+              </div>
+            </div>
+          </div>
+
+           {/* Sección 2: Registro Obligatorio */}
+          <div className="mb-10">
+            <div className="flex items-center gap-3 mb-6 pb-3 border-b-4 border-slate-400">
+              <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-black text-xl shadow-lg">2</div>
+              <h3 className="text-3xl font-black text-gray-800">Registro Obligatorio</h3>
+            </div>
+            
+            <div className="flex items-center gap-6">
+              <div className="flex-shrink-0">
+                <div className="rounded-3xl p-6 shadow-xl bg-gradient-to-br from-blue-500 to-blue-600">
+                  <UserCheck className="w-20 h-20 text-white" />
+                </div>
+              </div>
+              
+              <div className="flex-1 space-y-4">
+                <div className="rounded-2xl p-6 shadow-md bg-gradient-to-r from-blue-50 to-blue-100 border-l-4 border-blue-600">
+                  <p className="text-gray-800 text-lg font-bold mb-4">✓ Toda persona debe quedar registrada en:</p>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-white rounded-xl p-4 text-center border-2 border-blue-400 shadow-sm">
+                      <p className="font-black text-blue-900 text-lg">📋 Planilla física</p>
+                    </div>
+                    <div className="bg-white rounded-xl p-4 text-center border-2 border-blue-400 shadow-sm">
+                      <p className="font-black text-blue-900 text-lg">👆 Sistema biométrico</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="rounded-2xl p-5 shadow-md bg-gradient-to-r from-slate-100 to-slate-200 border-l-4 border-slate-500">
+                  <div className="flex items-start gap-3">
+                    <Clock className="w-6 h-6 text-slate-700 flex-shrink-0 mt-1" />
+                    <p className="text-gray-800 text-base font-semibold leading-relaxed">
+                      Recuerda realizar un seguimiento periódico para verificar que el registro se esté realizando correctamente.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Sección 3: Reporte de Hurtos */}
+          <div className="mb-6">
+            <div className="flex items-center gap-3 mb-6 pb-3 border-b-4 border-slate-400">
+              <div className="bg-teal-700 text-white rounded-full w-10 h-10 flex items-center justify-center font-black text-xl shadow-lg">3</div>
+              <h3 className="text-3xl font-black text-gray-800">Reporte de Hurtos</h3>
+            </div>
+            
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0">
+                <div className="bg-gradient-to-br from-teal-600 to-teal-700 rounded-3xl p-6 shadow-xl">
+                  <AlertTriangle className="w-20 h-20 text-white" />
+                </div>
+              </div>
+              
+              <div className="flex-1 space-y-4">
+                <div className="bg-gradient-to-r from-slate-700 to-slate-800 rounded-2xl p-5 shadow-lg">
+                  <div className="flex items-center justify-center gap-3">
+                    <Mail className="w-7 h-7 text-teal-300" />
+                    <p className="text-white font-black text-xl">⚡ REPORTAR INMEDIATAMENTE POR CORREO</p>
+                  </div>
+                </div>
+
+                <div className="bg-slate-50 rounded-2xl p-5 border-2 border-slate-300 shadow-md">
+                  <p className="text-gray-800 font-bold text-lg mb-4">El reporte debe incluir:</p>
+                  
+                  <div className="space-y-3">
+                    <div className="bg-white rounded-xl p-4 border-l-4 border-teal-600 shadow-sm">
+                      <p className="font-black text-teal-900 mb-2">1️⃣ Claridad sobre lo hurtado</p>
+                      <p className="text-gray-700 text-sm">Elemento(s), cantidad, descripción detallada, placa/serial (si aplica) y última ubicación conocida.</p>
+                    </div>
+                    
+                    <div className="bg-white rounded-xl p-4 border-l-4 border-teal-600 shadow-sm">
+                      <p className="font-black text-teal-900 mb-2">2️⃣ Hechos verificados</p>
+                      <p className="text-gray-700 text-sm">Descripción objetiva: hora aproximada, lugar exacto, responsables de turno y cómo se detectó. <span className="font-bold text-teal-800">Evitar suposiciones.</span></p>
+                    </div>
+                    
+                    <div className="bg-white rounded-xl p-4 border-l-4 border-blue-600 shadow-sm">
+                      <p className="font-black text-blue-900 mb-2">3️⃣ Pertenencia del bien</p>
+                      <p className="text-gray-700 text-sm">Identificar si corresponde a SED o Alianza Educativa (según inventario/placa/acta).</p>
+                    </div>
+                    
+                    <div className="bg-white rounded-xl p-4 border-l-4 border-blue-600 shadow-sm">
+                      <p className="font-black text-blue-900 mb-2">4️⃣ Denuncia formal</p>
+                      <p className="text-gray-700 text-sm">Realizar el debido denuncio ante la autoridad competente, según procedimiento institucional.</p>
+                    </div>
+                    
+                    <div className="bg-white rounded-xl p-4 border-l-4 border-teal-600 shadow-sm">
+                      <p className="font-black text-teal-900 mb-2">5️⃣ Proceso de reposición</p>
+                      <p className="text-gray-700 text-sm">Activar y revisar el proceso (póliza/aseguradora/compra u otro, según aplique).</p>
+                    </div>
+                    
+                    <div className="bg-white rounded-xl p-4 border-l-4 border-slate-600 shadow-sm">
+                      <p className="font-black text-slate-900 mb-2">6️⃣ Registro actualizado</p>
+                      <p className="text-gray-700 text-sm">Garantizar que los equipos se mantengan debidamente registrados (inventario/actas/bitácoras).</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Footer */}
+        <div className="p-8 bg-gradient-to-r from-teal-600 to-blue-600">
+          <div className="flex items-center justify-center gap-4">
+            <CheckCircle className="w-10 h-10 text-slate-100" />
+            <p className="text-white text-2xl font-black">Responsabilidad de todo el personal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Infografia;
